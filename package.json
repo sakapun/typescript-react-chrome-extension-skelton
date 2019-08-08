@@ -3,10 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emotion/core": "^10.0.15",
+    "@emotion/styled": "^10.0.15",
+    "@smooth-ui/core-em": "^10.1.0",
     "@types/jest": "24.0.17",
     "@types/node": "12.7.0",
     "@types/react": "16.8.24",
     "@types/react-dom": "16.8.5",
+    "emotion-theming": "^10.0.14",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.1",
@@ -17,7 +21,9 @@
     "build": "INLINE_RUNTIME_CHUNK=false react-scripts build && yarn run copy-assets",
     "copy-assets": "cp ./manifest.json ./build/ ",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "tslint --fix './{src,test,stories}/**/*.{ts,tsx}'",
+    "lint:no-fix": "tslint './{src,test,stories}/**/*.{ts,tsx}'"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -33,5 +39,12 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "prettier": "^1.18.2",
+    "tslint": "^5.18.0",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-plugin-prettier": "^2.0.1",
+    "tslint-react": "^4.0.0"
   }
 }
