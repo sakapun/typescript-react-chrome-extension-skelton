@@ -4,14 +4,11 @@
   "version": "1.0",
   "description": "Make link of current tab quickly",
   "browser_action": {
-    "default_icon": "icon.png",
+    "default_icon": "favicon.ico",
     "default_popup": "index.html"
   },
   "permissions": [
     "tabs",
     "https://*/*"
-  ],
-  "icons" : {
-    "128": "icon.png"
-  }
+  ]
 }
