@@ -5,17 +5,11 @@
   "description": "Make link of current tab quickly",
   "browser_action": {
     "default_icon": "icon.png",
-    "default_popup": "popup.html"
+    "default_popup": "index.html"
   },
   "permissions": [
     "tabs",
     "https://*/*"
-  ],
-  "content_scripts": [
-    {
-      "matches": ["http://*/*", "https://*/*"],
-      "js": ["popup.js"]
-    }
   ],
   "icons" : {
     "128": "icon.png"
