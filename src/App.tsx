@@ -1,13 +1,12 @@
+import { Box, Button } from "@chakra-ui/core";
 import React from "react";
 import { Provider } from "./application/";
-import { Box, Button } from "@smooth-ui/core-em";
+import Index from "./presentation/container/Main";
 
 const App: React.FC = () => {
   return (
     <Provider>
-      <Box width={200} height={200}>
-        <Button onClick={() => console.log(123)}>adfasdf</Button>
-      </Box>
+      <Index />
     </Provider>
   );
 };

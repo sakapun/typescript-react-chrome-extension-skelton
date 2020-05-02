@@ -1,3 +1,4 @@
+import { CSSReset } from "@chakra-ui/core";
 import { ThemeProvider } from "emotion-theming";
 import React, { createContext, useContext, useReducer } from "react";
 import UiTheme from "./UiTheme";
@@ -13,7 +14,10 @@ export const Provider: React.ComponentType = ({ children }) => {
   return (
     <dispatchContext.Provider value={dispatch}>
       <stateContext.Provider value={state}>
-        <ThemeProvider theme={UiTheme}>{children}</ThemeProvider>
+        <ThemeProvider theme={UiTheme}>
+          <CSSReset />
+          {children}
+        </ThemeProvider>
       </stateContext.Provider>
     </dispatchContext.Provider>
   );
