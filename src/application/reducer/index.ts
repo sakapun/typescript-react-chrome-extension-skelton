@@ -1,12 +1,10 @@
 export const defaultState = {
-  hoge: "piyo"
+  hoge: "piyo",
 };
 
 export type State = typeof defaultState;
 
-export type Action =
-  | { type: "FINISH_SETTING" }
-;
+export type Action = { type: "FINISH_SETTING" };
 
 export const reducer = (state: State, action: Action): State => {
   switch (action.type) {
